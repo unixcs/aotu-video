@@ -1,3 +1,0 @@
-file 'C:/Users/fengx/0/auto Video/workspace/projects/real-test-demo-fixed/outputs/shot-001_subtitled.mp4'
-file 'C:/Users/fengx/0/auto Video/workspace/projects/real-test-demo-fixed/outputs/shot-002_subtitled.mp4'
-file 'C:/Users/fengx/0/auto Video/workspace/projects/real-test-demo-fixed/outputs/shot-003_subtitled.mp4'

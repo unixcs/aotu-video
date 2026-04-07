@@ -1,3 +1,0 @@
-file 'C:/Users/fengx/0/auto Video/workspace/projects/real-test-demo-fixed/shots/shot-001/normalized/clip.mp4'
-file 'C:/Users/fengx/0/auto Video/workspace/projects/real-test-demo-fixed/shots/shot-002/normalized/clip.mp4'
-file 'C:/Users/fengx/0/auto Video/workspace/projects/real-test-demo-fixed/shots/shot-003/normalized/clip.mp4'
