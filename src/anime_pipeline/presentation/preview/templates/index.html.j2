@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ project.name }} Preview</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #111827; color: #f3f4f6; }
+    h1, h2 { margin-bottom: 8px; }
+    .meta { margin-bottom: 24px; color: #cbd5e1; }
+    .shot { border: 1px solid #374151; border-radius: 12px; padding: 16px; margin-bottom: 16px; background: #1f2937; }
+    .label { color: #93c5fd; font-weight: 600; }
+    code { background: #0f172a; padding: 2px 6px; border-radius: 6px; }
+    video { width: 100%; max-width: 420px; display: block; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h1>{{ project.name }}</h1>
+  <div class="meta">
+    <div>Slug: <code>{{ project.slug }}</code></div>
+    <div>Ratio: <code>{{ project.ratio }}</code></div>
+    <div>Target Duration: <code>{{ project.target_duration }}</code></div>
+  </div>
+
+  <h2>Shots</h2>
+  {% for shot in shots %}
+  <section class="shot">
+    <div><span class="label">Shot:</span> {{ shot.shot_no }}</div>
+    <div><span class="label">Title:</span> {{ shot.title }}</div>
+    <div><span class="label">Status:</span> {{ shot.pipeline_status }}</div>
+    <div><span class="label">Prompt:</span> {{ shot.prompt_text }}</div>
+    <div><span class="label">Script:</span> {{ shot.script_text }}</div>
+    {% if shot.normalized_video_path %}
+    <div><span class="label">Video:</span> <code>{{ shot.normalized_video_path }}</code></div>
+    <video controls src="{{ shot.normalized_video_path }}"></video>
+    {% else %}
+    <div><span class="label">Video:</span> <code>Not available</code></div>
+    {% endif %}
+  </section>
+  {% endfor %}
+</body>
+</html>
